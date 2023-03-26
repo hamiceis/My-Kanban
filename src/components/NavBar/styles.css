@@ -1,0 +1,27 @@
+
+.nav {
+  display: flex;
+  width: fit-content;
+  margin: 5.9rem 2.7rem 0 3.5rem;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+
+.nav ul li {
+  display: flex;
+  gap: 1.6rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 125%;
+  color: #CAB3FF;
+  cursor: pointer;
+}
+
+.nav li.active {
+    color: #FFFFFF;
+    font-weight: 700;
+}

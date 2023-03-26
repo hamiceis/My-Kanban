@@ -1,0 +1,75 @@
+
+:root {
+  --bg-color: #7C3AED;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: white;
+}
+
+#app {
+  display: flex;
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+.aside-menu {
+  max-width: 17.5rem;
+}
+
+.aside-menu img {
+  margin: 3.2rem 3.5rem 0;
+}
+
+main {
+  width: 100%;
+  padding: 5.9rem 5.6rem;
+  border-radius: 2rem 0 0 0;
+  background-color: white;
+  color: black;
+}
+
+.dashboard-main {
+  display: grid;
+  height: 80%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  overflow-y: scroll;
+  gap: 4.8rem;
+}
+
+.dashboard-main::-webkit-scrollbar {
+  display: none;
+}
+
+.dashboard-main:hover::-webkit-scrollbar {
+  display: block;
+  width: .5rem;
+  background-color: rgba(0, 0, 0, 0.4); /* Cor da barra de rolagem */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+.dashboard-main::-webkit-scrollbar-thumb {
+  background-color: #7C3AED;
+}
+
+.dashboard-main::-webkit-scrollbar-track {
+  width: 1px; /* Largura da barra de rolagem */
+}
+
+
+@media (max-width: 1105px) {
+  .dashboard-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 998px) {
+  .dashboard-main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
