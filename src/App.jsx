@@ -10,6 +10,7 @@ import { Header } from "./components/Header";
 
 import { fetchData } from "./services/fetchData";
 import { Search } from "./components/Search";
+import { Button } from "./components/Button";
 
 function App() {
   const data = fetchData();
@@ -41,10 +42,11 @@ function App() {
         </Nav>
       </div>
       <main>
+        <Button />
         <Header />
         <Search />
         <div className="dashboard-main">
-          <List>
+          <List title="A Fazer">
             {data[0].tasks.map((info) => (
               <Card
                 key={info?.id}
@@ -55,7 +57,7 @@ function App() {
             ))}
           </List>
 
-          <List>
+          <List title="Fazendo"> 
             {data[1].tasks.map((info) => (
               <Card
                 key={info?.id}
@@ -66,7 +68,7 @@ function App() {
             ))}
           </List>
 
-          <List>
+          <List title="Finalizado">
             {data[2].tasks.map((info) => (
               <Card
                 key={info?.id}

@@ -1,0 +1,120 @@
+.custom-icon {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  border: none;
+  outline-color: #7C3AED;
+  box-shadow: 1px 2px 3px rgba(0,0,0,.4);
+  background-color: white;
+  color: #7C3AED;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.dialog-overlay {
+ background-color: rgba(0, 0, 0, 0.4);
+ inset: 0;
+ position: fixed;
+}
+
+.dialog-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  max-width: 62rem;
+  width: 100%;
+  padding: 2.5rem 3rem;
+  background-color: #FBFAFF;
+  border-radius: .8rem;
+  outline: #7C3AED;
+  z-index: 2;
+}
+
+.dialog-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #403937;
+}
+
+.dialog-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: transparent;
+  color: #403937;
+  border: none;
+  line-height: 0;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.dialog-close:hover {
+  color: #7C3AED;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  margin-top: 2rem;
+}
+
+.form input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background-color: #FFFFFF;
+  color: #505059;
+  border: 1px solid #e3e3e3;
+  border-radius: .5rem;
+  box-shadow: 0px .25rem 1rem rgba(22,22,22,0.1);
+  font-weight: 400;
+  font: 1rem;
+}
+
+input::placeholder {
+  color: #7C7C8A;
+}
+
+textarea {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background-color: #FFFFFF;
+  border: 1px solid #e3e3e3;
+  border-radius: .5rem;
+  box-shadow: 0px .25rem 1rem rgba(22, 22, 22, 0.1);
+  font-weight: 400;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+textarea::placeholder {
+  color: #7C7C8A;
+}
+
+.button-form {
+  padding: 1rem 2rem;
+  background-color: #7C7C8A;
+  color: #FFFFFF;
+  border: 0;
+  border-radius: .3125rem;
+  text-shadow: 0px .25rem 1rem rgba(22, 22, 22, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  transition: fiter .2s;
+}
+
+.button-form:hover {
+  filter: brightness(110%)
+}
