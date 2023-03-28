@@ -25,12 +25,11 @@
 
 .dialog-content {
   position: fixed;
+  width: 100%;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%);
-  transform: translateX(-50%);
-  max-width: 62rem;
-  width: 100%;
+  transform: translate(-50%,-50%);
+  max-width: 60rem;
   padding: 2.5rem 3rem;
   background-color: #FBFAFF;
   border-radius: .8rem;

@@ -1,7 +1,9 @@
 import * as Dialog from "@radix-ui/react-dialog"
 import "./styles.css"
-import { RxPlus, RxExit, RxCross1 } from 'react-icons/rx'
+import { RxPlus, RxCross1 } from 'react-icons/rx'
 import { FaPen } from 'react-icons/fa'
+import { Form } from '../Form'
+
 export function Button(){
   return (
     <Dialog.Root>
@@ -22,6 +24,8 @@ export function Button(){
           <Dialog.Close className="dialog-close">
             <RxCross1 size={20} />
           </Dialog.Close>
+
+          <Form />
 
         </Dialog.Content>
 
