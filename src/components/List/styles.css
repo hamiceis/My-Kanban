@@ -6,6 +6,12 @@
   gap: 2.4rem;
 }
 
+.wrapper-card h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 130%;
+}
+
 .wrapper-card {
   padding: 2.4rem;
 }

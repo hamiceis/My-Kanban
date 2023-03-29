@@ -1,6 +1,9 @@
 .wrapper-search {
   display: flex;
   margin-top: 3.2rem;
+  box-shadow: 0px 4px 16px rgba(22, 22, 22, 0.1);
+  border-radius: .8rem;
+  margin-bottom: 1.6rem;
 }
 
 .wrapper-search button {
@@ -22,6 +25,7 @@
   align-items: center;
   gap: 1rem;
   padding: 2.4rem;
+ 
 }
 
 .input input {
