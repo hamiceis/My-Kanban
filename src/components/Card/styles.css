@@ -2,6 +2,7 @@
   padding: 1.4rem;
   box-shadow: 0px 4px 16px #EAE2FD;
   border-radius: .8rem;
+  max-width: 27.3rem;
 }
 
 .card h3 {
@@ -13,6 +14,9 @@
 
 .card p {
   margin-block: 1rem;
+  overflow: hidden;
+  white-space: nowwrap;
+  text-overflow: ellipsis;
   color: #756966;
   font-size: 1.4rem;
   font-weight: 500;
@@ -34,4 +38,14 @@
   background-color: #E2D6FF;
   border-radius: .8rem;
 }
+
+.dragging { 
+  border: 2px dashed rgba(0, 0, 0, 0.2);
+  padding: 1.2rem;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  cursor: grabbing;
+}
+
 
