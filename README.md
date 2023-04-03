@@ -21,6 +21,13 @@ upload
   <img src="https://i.ibb.co/8nw1mdS/localhost-5173-Nest-Hub-Max.png" width="100%">
 </p>
 
+## 🌐 Deploy 
+
+<p>
+  <a href="https://my-kanban-khaki.vercel.app/">My-Kanban</a>
+</P>
+
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
