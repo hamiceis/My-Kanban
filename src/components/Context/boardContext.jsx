@@ -11,12 +11,12 @@ const data = fetchData()
 export function BoardProvider({ children }) {
   const [lists, setLists] = useState(data);
 
-   function move(fromList, toList, from, to) {   //move(Listindex, ListAlvo, indexCardArrastado, Index do seu Alvo)
-    setLists(produce(lists, draft => {   //draft, faz uma cópia do seu primeiro parametro - lists
+   function move(fromList, toList, from, to) {   
+    setLists(produce(lists, draft => {  
       const dragged = draft[fromList].tasks[from];
 
-      draft[fromList].tasks.splice(from, 1)    //
-      draft[toList].tasks.splice(to, 0, dragged) // 
+      draft[fromList].tasks.splice(from, 1)    
+      draft[toList].tasks.splice(to, 0, dragged)  
     }))
   }
 

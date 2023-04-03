@@ -20,46 +20,47 @@ export function Card({ title, description, tags, index, listIndex }) {
   }));
 
   const [_, dropRef] = useDrop({
-    accept: 'task',
+    accept: "task",
     hover(item, monitor) {
-      const draggedListIndex = item.listIndex //Index da Lista Arrastável
-      const targetListIndex = listIndex  //Index da Lista alvo 
+      const draggedListIndex = item.listIndex;
+      const targetListIndex = listIndex;
 
-      const draggedIndex = item.index  //index do card que está sendo arrastado
-      const targetIndex = index // index do Card, que está por baixo do arrastavel 
+      const draggedIndex = item.index;
+      const targetIndex = index;
 
-      if(draggedIndex === targetIndex && draggedListIndex === targetListIndex) {   //se index do arrastavel for igual ao mesmo não faça nada, e se index da Lista for igual ao Index da Lista alvo igual também não faça nada
-        return 
+      if (
+        draggedIndex === targetIndex &&
+        draggedListIndex === targetListIndex
+      ) {
+        return;
       }
 
-      const targetSize = ref.current.getBoundingClientRect(); // Tamanho do Card 
-      const targetCenter = (targetSize.bottom - targetSize.top) / 2; // Ponto central vertical do Card
+      const targetSize = ref.current.getBoundingClientRect();
+      const targetCenter = (targetSize.bottom - targetSize.top) / 2;
 
-      const draggedOffSet = monitor.getClientOffset();  // posição atual (x, y) do item arrastado na tela. 
-      const draggedTop = draggedOffSet.y - targetSize.top; // posição y da tela - topo do card para o topo da tela ou card supereior 
-      
-      if(draggedIndex < targetIndex && draggedTop < targetCenter) { // se arrastar item ele estiver já no topo não faça nada
-        return 
+      const draggedOffSet = monitor.getClientOffset();
+      const draggedTop = draggedOffSet.y - targetSize.top;
+
+      if (draggedIndex < targetIndex && draggedTop < targetCenter) {
+        return;
       }
 
-      if(draggedIndex > targetIndex && draggedTop > targetCenter) { // se o item já estiver no bottom não faça nada
-        return 
+      if (draggedIndex > targetIndex && draggedTop > targetCenter) {
+        return;
       }
 
-      move(draggedListIndex, targetListIndex, draggedIndex, targetIndex)
+      move(draggedListIndex, targetListIndex, draggedIndex, targetIndex);
 
-      item.index = targetIndex;  //vai atualizar o card arrastavel que ele vai receber a posição do seu Alvo
-      item.listIndex = targetListIndex //
-    }
-  })
+      item.index = targetIndex;
+      item.listIndex = targetListIndex;
+    },
+  });
 
-  dragRef(dropRef(ref))
+  dragRef(dropRef(ref));
 
   useEffect(() => {
     setIsDraggingStyle(stateDrag ? "dragging" : "");
   }, [stateDrag]);
-
-
 
   return (
     <div className={`card ${isDraggingStyle}`} ref={ref}>
